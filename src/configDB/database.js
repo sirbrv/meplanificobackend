@@ -10,12 +10,18 @@ if (PORT == 4000) {
   USER: process.env.USER;
   PASSWORD: process.env.PASSWORD;
   DB: process.env.DATA_BASE;
-} else {
+} /*
+else {
   HOST: process.env.DB_HOST;
   USER: process.env.DB_USER;
   DB: process.env.DB_DATABASE;
   PASSWORD: process.env.DB_PASSWORD;
 }
+*/
+HOST: "us-cdbr-east-06.cleardb.net";
+USER: "b954e91af793b9";
+DB: "heroku_b72450ee00ac91b";
+PASSWORD: "b0b4f80e";
 
 const dialect = "mysql";
 const pool = {
