@@ -15,12 +15,14 @@ const sequelize = new Sequelize(
   {
     host: "us-cdbr-east-06.cleardb.net",
     dialect: dbConfig.dialect,
+    port: "3306",
     pool: {
       max: dbConfig.pool.max,
       min: dbConfig.pool.min,
       acquire: dbConfig.pool.acquire,
       idle: dbConfig.pool.idle,
     },
+    socketPath: "/Applications/MAMP/tmp/mysql/mysql.sock",
   }
 );
 
