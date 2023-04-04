@@ -12,7 +12,7 @@ const { token } = require("morgan");
 
 exports.usersController = async (req, res) => {
   const usuarios = await Users.findAll({});
- // console.log("Usuarios ", usuarios);
+  // console.log("Usuarios ", usuarios);
   if (usuarios.length > 0) {
     res.json({ status: "200", msg: "Usuarios Registrados..", data: usuarios });
   } else {
@@ -21,7 +21,7 @@ exports.usersController = async (req, res) => {
 };
 
 exports.usersController = async (req, res) => {
- /* console.log("==========================================");
+  /* console.log("==========================================");
   console.log("req.body...", req.body);
   console.log("req.query...", req.query);
   console.log("=========================================="); */
@@ -63,7 +63,7 @@ const getPagingData = (data, page, limit) => {
 
 exports.createUsers = async (req, res) => {
   const encriClave = await bcrypt.hash(req.body.data.userPassword, 10);
- // console.log("Entre a crear registro....", req.body.data);
+  // console.log("Entre a crear registro....", req.body.data);
   const existeUsuario = await Users.findOne({
     where: { email: req.body.data.IdUsuario },
   });
@@ -99,7 +99,7 @@ exports.loginUser = async (req, res) => {
   const existeusuario = await Users.findOne({
     where: { email: req.body.data.IdUsuario },
   });
- // console.log("......existeusuario...", existeusuario);
+  // console.log("......existeusuario...", existeusuario);
   if (!existeusuario) {
     return res.json({ status: "404", msg: "El usuario no está registrado" });
   }
@@ -119,16 +119,16 @@ exports.loginUser = async (req, res) => {
     token: generarJWT(existeusuario.id),
     login: true,
   };
- // console.log("Login....:", data);
+  // console.log("Login....:", data);
   res.json({ status: "200", data: data });
 };
 
 exports.getUsers = async (req, res) => {
- // console.log(req.params);
+  // console.log(req.params);
   //  let { id } = req.params;
- // console.log("Parametros. get.:", req.params.id);
+  // console.log("Parametros. get.:", req.params.id);
   const existeusuario = await Users.findOne({ where: { id: req.params.id } });
- // console.log(existeusuario);
+  // console.log(existeusuario);
   if (!existeusuario) {
     return res.json({ status: "404", msg: "El ID no está registrado" });
   }
@@ -136,7 +136,7 @@ exports.getUsers = async (req, res) => {
 };
 
 exports.updateUser = async (req, res, next) => {
- // console.log("req.body.data....", req.body);
+  // console.log("req.body.data....", req.body);
   await Users.findOne({ where: { id: req.params.id } }).then((user) => {
     if (user) {
       let existeusuario = {
@@ -147,7 +147,7 @@ exports.updateUser = async (req, res, next) => {
         direccion: req.body.data.direccion,
         numTelefono: req.body.data.numTelefono,
       };
-    //  console.log("...existe.....usuario...", existeusuario);
+      //  console.log("...existe.....usuario...", existeusuario);
       const user_data = user
         .update(existeusuario)
         .then(function () {
@@ -178,7 +178,7 @@ exports.deleteUser = async (req, res, next) => {
 };
 
 exports.cambioClaveUser = async (req, res) => {
- // console.log("Entre a cambio....", req.body.data);
+  // console.log("Entre a cambio....", req.body.data);
   let existeusuario = "";
 
   await Users.findOne({ where: { email: req.body.data.IdUsuario } })
@@ -214,7 +214,7 @@ exports.cambioClaveUser = async (req, res) => {
         where: { email: req.body.data.IdUsuario },
       }).then((user) => {
         if (user) {
-        //  console.log("...existeusuario...", existeusuario);
+          //  console.log("...existeusuario...", existeusuario);
           const user_data = user
             .update(existeusuario)
             .then(function () {
