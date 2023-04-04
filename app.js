@@ -1,7 +1,7 @@
 var express = require("express");
 var path = require("path");
-//var cookieParser = require("cookie-parser");
-var logger = require("morgan");
+var cookieParser = require("cookie-parser");
+//var logger = require("morgan");
 const cors = require("cors");
 const helmet = require("helmet");
 const paginate = require("express-paginate");
@@ -20,7 +20,7 @@ var corOptions = {
   origin: "http://localhost:4000",
   origin: "https://git.heroku.com/meplanificoserver.git",
 };
-app.use(logger("dev"));
+//app.use(logger("dev"));
 app.use(express.json({ limit: "50mb", extended: true, parameterLimit: 50000 }));
 app.use(
   express.urlencoded({ limit: "50mb", extended: true, parameterLimit: 50000 })
