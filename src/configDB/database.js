@@ -4,6 +4,7 @@ const HOST = process.env.HOST;
 const USER = process.env.USER;
 const PASSWORD = process.env.PASSWORD;
 const DB = process.env.DATA_BASE;
+
 // Parametros de conexion
 if (PORT == 4000) {
   HOST: process.env.HOST;
@@ -16,6 +17,7 @@ if (PORT == 4000) {
   DB: process.env.DB_DATABASE;
   PASSWORD: process.env.DB_PASSWORD;
 }
+
 const dialect = "mysql";
 const pool = {
   max: 5,
