@@ -21,8 +21,7 @@
     "rotating-file-stream": "^3.0.4",
     "sequelize": "^6.28.0",
     "server": "^1.0.38",
-    "yup": "^0.32.11",
-    "morgan": "~1.9.1"
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "dotenv": "^16.0.1",
