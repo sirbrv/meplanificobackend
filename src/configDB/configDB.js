@@ -22,10 +22,9 @@ const sequelize = new Sequelize(
       acquire: dbConfig.pool.acquire,
       idle: dbConfig.pool.idle,
     },
-    socketPath: "/Applications/MAMP/tmp/mysql/mysql.sock",
   }
 );
-
+/*
 sequelize
   .authenticate()
   .then(() => {
@@ -41,8 +40,9 @@ sequelize
     );
     console.log("Error de Conexión a la BD.." + err);
   });
-
+*/
 const db = {};
+console.log("Conectado a la Base de Datos MqSql.");
 
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
