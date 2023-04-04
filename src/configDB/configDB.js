@@ -1,16 +1,28 @@
 const dbConfig = require("./database.js");
 const { Sequelize, DataTypes } = require("sequelize");
-
+/*
+DB_HOST: us-cdbr-east-06.cleardb.net
+DB_DATABASE: heroku_3a90d0af39b56c6
+DB_USER: b66ab2862cf7c6
+DB_PASSWORD: 684ccc08
 const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
   host: dbConfig.HOST,
-  dialect: dbConfig.dialect,
-  pool: {
-    max: dbConfig.pool.max,
-    min: dbConfig.pool.min,
-    acquire: dbConfig.pool.acquire,
-    idle: dbConfig.pool.idle,
-  },
-});
+*/
+const sequelize = new Sequelize(
+  "heroku_3a90d0af39b56c6",
+  "b66ab2862cf7c6",
+  "684ccc08",
+  {
+    host: "us-cdbr-east-06.cleardb.net",
+    dialect: dbConfig.dialect,
+    pool: {
+      max: dbConfig.pool.max,
+      min: dbConfig.pool.min,
+      acquire: dbConfig.pool.acquire,
+      idle: dbConfig.pool.idle,
+    },
+  }
+);
 
 sequelize
   .authenticate()
