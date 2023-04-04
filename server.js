@@ -16,6 +16,7 @@ var debug = require("debug")("server:server");
 var http = require("http");
 
 // Handle errors
+
 app.use(errorHandler());
 app.get("/:img", function (req, res) {
   res.sendFile(__dirname + `/imagenes/${img}`);
