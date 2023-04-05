@@ -6,7 +6,7 @@ let DB_DATABASE = process.env.DB_DATABASE;
 let DB_USER = process.env.DB_USER;
 let DB_PASSWORD = process.env.DB_PASSWORD;
 
-if ((dbConfig.port == 4000, DB_HOST)) {
+if (dbConfig.port == 4000) {
   DB_DATABASE = dbConfig.database;
   DB_USER = dbConfig.user;
   DB_PASSWORD = dbConfig.password;
