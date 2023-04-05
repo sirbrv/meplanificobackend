@@ -4,16 +4,7 @@ const host = process.env.HOST;
 const user = process.env.USER;
 const password = process.env.PASSWORD;
 const database = process.env.DATA_BASE;
-
 // Parametros de conexion de db
-
-if (port != 4000) {
-  host: process.env.DB_HOST; //
-  user: process.env.DB_USER;
-  database: process.env.DB_DATABASE;
-  password: process.env.DB_PASSWORD;
-}
-
 const dialect = "mysql";
 const pool = {
   max: 10,
@@ -21,7 +12,6 @@ const pool = {
   acquire: 30000,
   idle: 10000,
 };
-
-console.log(host, user, password, database, dialect, pool);
+console.log(host, user, password, database, dialect, pool, port);
 
 module.exports = { host, user, password, database, dialect, pool, port };
