@@ -1,10 +1,19 @@
 const dbConfig = require("./database.js");
 const { Sequelize, DataTypes } = require("sequelize");
-const DB_HOST = process.env.DB_HOST; //"us-cdbr-east-06.cleardb.net";
-const DB_DATABASE = process.env.DB_DATABASE; //"heroku_3a90d0af39b56c6";
-const DB_USER = process.env.DB_USER; //"b66ab2862cf7c6";
-const DB_PASSWORD = process.env.DB_PASSWORD; //"684ccc08";
+const port = process.env.PORT || "4000";
+const host = process.env.HOST;
+const user = process.env.USER;
+const password = process.env.PASSWORD;
+const database = process.env.DATA_BASE;
 
+// Parametros de conexion de db
+
+if (port != 4000) {
+  const DB_HOST = process.env.DB_HOST; //"us-cdbr-east-06.cleardb.net";
+  const DB_DATABASE = process.env.DB_DATABASE; //"heroku_3a90d0af39b56c6";
+  const DB_USER = process.env.DB_USER; //"b66ab2862cf7c6";
+  const DB_PASSWORD = process.env.DB_PASSWORD; //"684ccc08";
+}
 /*
 const sequelize = new Sequelize(
   dbConfig.database,
