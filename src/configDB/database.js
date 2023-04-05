@@ -24,4 +24,4 @@ const pool = {
 
 console.log(host, user, password, database, dialect, pool);
 
-module.exports = { host, user, password, database, dialect, pool };
+module.exports = { host, user, password, database, dialect, pool, port };
