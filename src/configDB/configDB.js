@@ -4,16 +4,13 @@ const { Sequelize, DataTypes } = require("sequelize");
 DB_HOST: us-cdbr-east-06.cleardb.net
 DB_DATABASE: heroku_3a90d0af39b56c6
 DB_USER: b66ab2862cf7c6
-DB_PASSWORD: 684ccc08
-const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
-  host: dbConfig.HOST,
-*/
+DB_PASSWORD: 684ccc08 */
 const sequelize = new Sequelize(
-  "heroku_b72450ee00ac91b",
-  "b954e91af793b9",
-  "b0b4f80e",
+  dbConfig.database,
+  dbConfig.user,
+  dbConfig.password,
   {
-    host: "us-cdbr-east-06.cleardb.net",
+    host: dbConfig.host,
     dialect: dbConfig.dialect,
     port: "3306",
     pool: {
@@ -24,7 +21,7 @@ const sequelize = new Sequelize(
     },
   }
 );
-/*
+
 sequelize
   .authenticate()
   .then(() => {
@@ -33,16 +30,15 @@ sequelize
   .catch((err) => {
     console.log(
       "Datos de Conexión a la bd..",
-      dbConfig.HOST,
-      dbConfig.DB,
-      dbConfig.USER,
-      dbConfig.PASSWORD
+      dbConfig.host,
+      dbConfig.database,
+      dbConfig.user,
+      dbConfig.password
     );
     console.log("Error de Conexión a la BD.." + err);
   });
-*/
+
 const db = {};
-console.log("Conectado a la Base de Datos MqSql.");
 
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
