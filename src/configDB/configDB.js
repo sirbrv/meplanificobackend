@@ -12,6 +12,7 @@ if (dbConfig.port === 4000) {
   DB_PASSWORD = dbConfig.password;
   DB_HOST = dbConfig.host;
 }
+console.log(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
 
 const sequelize = new Sequelize(DB_DATABASE, DB_USER, DB_PASSWORD, {
   host: DB_HOST,

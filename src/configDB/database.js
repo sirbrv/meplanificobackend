@@ -12,6 +12,4 @@ const pool = {
   acquire: 30000,
   idle: 10000,
 };
-console.log(host, user, password, database, dialect, pool, port);
-
 module.exports = { host, user, password, database, dialect, pool, port };
