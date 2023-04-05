@@ -18,7 +18,7 @@ app.use(cors(corOptions))
 
 var corOptions = {
   origin: "http://localhost:4000",
-  origin: "https://git.heroku.com/meplanificoserver.git",
+  origin: "https://meplanificobackend.herokuapp.com/",
 };
 app.use(logger("dev"));
 app.use(express.json({ limit: "50mb", extended: true, parameterLimit: 50000 }));
