@@ -8,12 +8,12 @@ const DB_DATABASE = process.env.DATA_BASE;
 
 // Parametros de conexion de db
 
-if (port != 4000) {
-  DB_HOST = process.env.DB_HOST; //"us-cdbr-east-06.cleardb.net";
-  DB_DATABASE = process.env.DB_DATABASE; //"heroku_3a90d0af39b56c6";
-  DB_USER = process.env.DB_USER; //"b66ab2862cf7c6";
-  DB_PASSWORD = process.env.DB_PASSWORD; //"684ccc08";
-}
+/* if (port != 4000) { */
+DB_HOST = process.env.DB_HOST; //"us-cdbr-east-06.cleardb.net";
+DB_DATABASE = process.env.DB_DATABASE; //"heroku_3a90d0af39b56c6";
+DB_USER = process.env.DB_USER; //"b66ab2862cf7c6";
+DB_PASSWORD = process.env.DB_PASSWORD; //"684ccc08";
+/*}
 /*
 const sequelize = new Sequelize(
   dbConfig.database,
