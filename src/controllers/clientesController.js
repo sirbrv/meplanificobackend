@@ -91,7 +91,6 @@ exports.getcliente = async (req, res) => {
 exports.updateCliente = async (req, res, next) => {
 //  console.log("Entre a crear clientes....",req.body)
  // let dataClient = await Clientes.findOne({ where: { id: req.params.id }})
-//console.log("Voy a Actualizarlo", req.body.email)
  //   if(dataClient){
 
           Clientes.update(

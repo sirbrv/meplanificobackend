@@ -74,7 +74,6 @@ exports.createTipoGasto = async (req, res) => {
   } catch (error) {
     res.json({ status: "409", msg: error.message });
   }
- // console.log("......salida...", existeTipoGasto);
   if (existeTipoGasto != null) {
     if (existeTipoGasto) {
       return res.json({

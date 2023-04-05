@@ -4,9 +4,9 @@ const host = process.env.HOST;
 const user = process.env.USER;
 const password = process.env.PASSWORD;
 const database = process.env.DATA_BASE;
-/*
+
 // Parametros de conexion de db
-*/
+
 if (port != 4000) {
   host: process.env.DB_HOST;
   user: process.env.DB_USER;

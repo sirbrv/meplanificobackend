@@ -73,7 +73,6 @@ exports.createContacto = async (req, res) => {
  // console.log("newData..", newData);
   try {
     await Contactos.create(newData);
-  //  console.log("Todo bien...");
     res.json({ status: "201", msg: "El registro fue Creado", data: newData });
   } catch (error) {
    // console.log("Todo mal...", error);

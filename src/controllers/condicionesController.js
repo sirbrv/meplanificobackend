@@ -41,7 +41,6 @@ exports.getCondiciones = async (req, res) => {
   })
     .then((data) => {
       const response = getPagingData(data, page, limit);
-    //  console.log(response);
       res.json({
         status: "200",
         msg: "Tipo de Condiciones Registradas..",

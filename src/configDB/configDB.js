@@ -1,10 +1,6 @@
 const dbConfig = require("./database.js");
 const { Sequelize, DataTypes } = require("sequelize");
-/*
-DB_HOST: us-cdbr-east-06.cleardb.net
-DB_DATABASE: heroku_3a90d0af39b56c6
-DB_USER: b66ab2862cf7c6
-DB_PASSWORD: 684ccc08 */
+
 const sequelize = new Sequelize(
   dbConfig.database,
   dbConfig.user,

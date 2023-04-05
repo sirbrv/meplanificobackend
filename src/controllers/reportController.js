@@ -98,7 +98,6 @@ const fnEndFecha = (month, year) => {
 
 const gastoControl = (ingresos, planes, gastos) => {
   let idem = 0;
-  console.log("Entre....", planes);
   /*    console.log("Entre....", planes);
     console.log("Entre....", gastos); */
   // ingresos.map((item) => (totalIngreso = totalIngreso + item.monto));

@@ -5,7 +5,6 @@ const Op = db.Sequelize.Op;
 
 exports.getIngresos = async (req, res) => {
 /*  console.log("==========================================");
-  console.log("req.body...", req.body);
   console.log("req.query...", req.query);
   console.log("=========================================="); */
   let page = req.query.page ? req.query.page - 1 : 0;

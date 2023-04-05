@@ -88,7 +88,6 @@ exports.createPlan = async (req, res) => {
     tipoGastoDescripcion: req.body.data.tipoGastoDescrip,
     monto: req.body.data.monto,
   };
- // console.log("newPlanes....:", newPlanes);
   try {
     await Planes.create(newPlanes);
     res.json({

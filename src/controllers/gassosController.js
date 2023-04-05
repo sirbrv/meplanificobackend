@@ -176,7 +176,6 @@ const converFecha = (fecha) => {
 const fnStartFecha = (month, year) => {
   month < 10 ? (month = "0" + month) : month;
   const date = year + "-" + month + "-01";
-//  console.log(date);
   return date;
 };
 

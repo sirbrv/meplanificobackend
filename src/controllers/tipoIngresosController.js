@@ -73,7 +73,6 @@ exports.createTipoIngreso = async (req, res) => {
   } catch (error) {
     res.json({ status: "409", msg: error.message });
   }
-//  console.log("......salida...", existeTipoIngreso);
   if (existeTipoIngreso != null) {
     if (existeTipoIngreso) {
       return res.json({
