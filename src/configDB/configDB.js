@@ -1,18 +1,18 @@
 const dbConfig = require("./database.js");
 const { Sequelize, DataTypes } = require("sequelize");
 
-const DB_HOST = process.env.DB_HOST;
-const DB_DATABASE = process.env.DB_DATABASE;
-const DB_USER = process.env.DB_USER;
-const DB_PASSWORD = process.env.DB_PASSWORD;
+let DB_HOST = process.env.DB_HOST;
+let DB_DATABASE = process.env.DB_DATABASE;
+let DB_USER = process.env.DB_USER;
+let DB_PASSWORD = process.env.DB_PASSWORD;
 
-if (dbConfig.port === 4000) {
+if ((dbConfig.port == 4000, DB_HOST)) {
   DB_DATABASE = dbConfig.database;
   DB_USER = dbConfig.user;
   DB_PASSWORD = dbConfig.password;
   DB_HOST = dbConfig.host;
 }
-/* console.log(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE); */
+console.log(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE, dbConfig.port);
 
 const sequelize = new Sequelize(DB_DATABASE, DB_USER, DB_PASSWORD, {
   host: DB_HOST,
