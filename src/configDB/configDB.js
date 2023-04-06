@@ -12,7 +12,7 @@ if (dbConfig.port == 4000) {
   DB_PASSWORD = dbConfig.password;
   DB_HOST = dbConfig.host;
 }
-console.log(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE, dbConfig.port);
+// console.log(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE, dbConfig.port);
 
 const sequelize = new Sequelize(DB_DATABASE, DB_USER, DB_PASSWORD, {
   host: DB_HOST,
@@ -32,13 +32,6 @@ sequelize
     console.log("Conectado a la Base de Datos MqSql.");
   })
   .catch((err) => {
-    console.log(
-      "Datos de Conexión a la bd..",
-      DB_DATABASE,
-      DB_USER,
-      DB_PASSWORD,
-      DB_HOST
-    );
     console.log("Error de Conexión a la BD.." + err);
   });
 
@@ -63,7 +56,7 @@ db.condiciones = require("../models/mysql/condicionesModel.js")(
   DataTypes
 );
 db.sequelize.sync({ force: false }).then(() => {
-  console.log("re-sync terminado!");
+  console.log("Inicialización del proyecto terminado correctamente!");
 });
 
 module.exports = db;

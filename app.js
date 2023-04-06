@@ -32,8 +32,6 @@ app.use(helmet());
 
 app.use("/apie/img", express.static(path.join(__dirname, "/public/images")));
 app.get("/api/img/:id", function (req, res) {
-  console.log("Nombre de la image..;,", req.params);
-  console.log(__dirname + `/public/images/${req.params.id}`);
   res.send(__dirname + `/public/images/${req.params.id}`);
 });
 // This middleware adds the json header to every response
