@@ -7,7 +7,7 @@
   "profile": {
     "name": "typicode"
   },
-  dara:{
+  "data" :[{
     "name": "Victor",
     "password": "jabdjabd00",
     "email": "victor@gmail.com",
@@ -41,5 +41,5 @@
     "email": "maria@gmail.com",
     "job": "Developer",
     "avatar": "http://localhost:3000/images/1696639444235-OBPR9K_victor_omar__brown_peter_1962_6_15_0_4_M.png"
-  }
+  }]
 ]
