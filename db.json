@@ -1,4 +1,13 @@
-[
+[  "posts": [
+    {
+      "id": 1,
+      "title": "hello"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  dara:
   {
     "name": "Victor",
     "password": "jabdjabd00",
